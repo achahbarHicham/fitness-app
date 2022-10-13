@@ -1,0 +1,32 @@
+@import "../../index.scss";
+.related{
+    margin-top: 10rem;
+    padding: 10rem 0;
+    .swipe-icon{
+        height: 10rem;
+        @include center-elements();
+        .icon{
+            svg{
+                animation:sweipAnimation 5s ease-in-out infinite;
+                width: 5rem;
+                @include md(){
+                    display: none;
+                }
+                @keyframes sweipAnimation {
+                    0%{
+                        transform: rotate(0);
+                    }25%{
+                        transform: rotate(25deg);
+                    }50%{
+                        transform: rotate(50deg);
+                    }100%{
+                        transform: rotate(25deg);
+                    }
+                }
+            }
+        }
+    }
+    .mySwiper{
+        margin-top: 4rem;
+    }
+}

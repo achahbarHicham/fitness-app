@@ -1,0 +1,76 @@
+@import "../../../index.scss";
+.bodyparts-hero{
+    background-image: url('../../../assets/sm-image.jpeg');
+    @include md(){
+        background-image: url('../../../assets/md-body-parts-image.jpeg');
+    }
+    @include xlg(){
+        background-image: url('../../../assets/lg-image.jpeg');
+    }
+    margin-top: 2rem;
+    padding: 5rem 0;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include center-elements();
+
+
+    &::after{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.505);
+    }
+    &--hero{
+        position: relative;
+        z-index: 100;
+        h3{
+            @include center-elements();
+            
+            span{
+                margin-bottom: 4rem;
+            background-color: $color-primary;
+            padding: 1rem 2rem;
+            border-radius: 10px
+            
+            }
+        }
+        .icon-down{
+            @include center-elements();
+            margin-top: 8rem;
+            .icon{
+                padding: 2rem 1rem;
+                @include md(){
+                    padding: 3rem 1rem;
+                }
+                border: 1px solid white;
+                border-radius: 100px;
+                @include center-elements();
+                
+                svg{
+                    margin-top: -1rem;
+                    animation: fromBottomToTop 2.5s ease-in-out infinite;
+                    @keyframes fromBottomToTop{
+                        0%{
+                            transform: translateY(0);
+                        }70%{
+                            transform: translateY(15px);
+                        }100%{
+                            transform: translateY(0px);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.swiper-pagination-bullet-active{
+    background-color: white ;
+}

@@ -1,0 +1,13 @@
+@import "../../index.scss";
+
+
+.target-muscle-container{
+    padding: 10rem 0;
+    background-color: $dark-light-bg;
+        &--title{
+            margin-bottom: 4rem;
+        }
+
+    //    max-width: 60rem;
+    //    margin:5rem auto;
+}

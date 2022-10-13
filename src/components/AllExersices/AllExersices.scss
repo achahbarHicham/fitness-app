@@ -1,0 +1,72 @@
+@import "../../index.scss";
+.exersices{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    width: 100%;
+    @include md(){
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem;
+    }
+    @include lg(){
+        grid-template-columns: repeat(3,1fr);
+    }
+    @include xlg(){
+        gap: 3rem;
+    }
+}
+
+.pagination-container{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    flex-grow: wrap;
+    @include lg(){
+        margin-top: 8rem;
+    }
+    .next{
+        display: none;
+        margin-left: 3rem;
+    }
+    .prev{
+        display: none;
+        margin-right: 3rem;
+    }
+    .prev,.next{
+        cursor: pointer;
+        padding: 1rem 2rem;
+        background-color: $color-primary;
+        border-radius: 1rem;
+     
+        &:hover{
+            background-color: $color-hover-primary;
+        }
+    }
+    .item{
+        
+       
+
+        a{
+            margin: .2rem;
+            cursor: pointer;
+            height:3rem;
+            width: 3rem;
+            @include center-elements();
+            border-radius: .5rem;
+            &:hover{
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+        &.selected{
+            a{
+                background-color: $color-primary;
+                color: $color-white;
+            }
+        }
+
+    }
+
+}

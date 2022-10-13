@@ -1,0 +1,24 @@
+@import "../../index.scss";
+.single-ex-card{
+    height: 80vh;
+    margin-top: 4rem !important;
+}
+.back-body-parts{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .icon{
+        padding: 1rem 2rem;
+        background-color: $dark-light-bg;
+        
+        @include center-elements();
+        gap: 1rem;
+        font-size: inherit;
+        color: white;
+        transition: background-color .5s ease;
+        &:hover{
+            background-color: $bg-dark-card;    
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import "../../index.scss";
+
+.equipment{
+    padding: 5rem 0;
+    &--header{
+        padding: 5rem 0;
+        @include center-elements();
+        flex-direction: column;
+        margin-bottom: 5rem;
+        h2{
+            margin-bottom: 2rem;
+        }
+        .select{
+            height: 4rem;
+            width: 100%;
+            max-width: 40rem;
+            background-color: $color-primary;
+            position: relative;
+            padding-left: 1rem;
+            &:hover{
+                background-color: $color-hover-primary;
+            }
+            select{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-size: inherit;
+                font-family: inherit;
+                appearance: none;
+                -webkit-appearance: none;
+                color: white;
+            }
+        }
+        .icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 3rem;
+            height: 100%;
+            @include center-elements();
+        }
+    }
+}

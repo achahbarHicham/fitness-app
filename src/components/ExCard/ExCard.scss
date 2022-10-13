@@ -1,0 +1,14 @@
+@import "../../index.scss";
+
+.ex-image{
+    height: 30rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    @include center-elements();
+    @include sm(){
+        height: 40rem;
+    }
+}

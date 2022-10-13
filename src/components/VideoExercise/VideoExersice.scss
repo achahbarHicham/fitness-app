@@ -1,0 +1,72 @@
+@import "../../index.scss";
+.video-exercise{
+    padding: 10rem 0;
+    &--title{
+        margin-bottom: 5rem;
+        font-size: 2rem;
+        @include md(){
+            font-size: 3rem;
+        }
+    }
+
+    .select-body-part-video{
+        height: 4rem;
+        width: 100%;
+        background-color: $color-primary;
+        position: relative;
+        pointer-events: none;
+        max-width: 40rem;
+        margin: 5rem auto;
+        &:hover{
+            background-color: $color-hover-primary;
+            .icon-container{
+                background-color: $color-hover-primary;
+            }
+        }
+        select{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-left: 1rem;
+            color: white;
+            height: 100%;
+            width: 100%;
+            -moz-appearance: none;
+            appearance: none;
+            -webkit-appearance: none;
+            font-size: inherit;
+            font-family: inherit;
+            background-color: transparent;
+            pointer-events: all;
+            outline: none;
+            
+        }
+        .icon-container{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4rem;
+            height: 100%;
+            background-color: #9346e6;
+            z-index: 11;
+            @include center-elements();
+            pointer-events: none;
+            svg{
+                width: 5rem;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .videos-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        margin-top: 8rem;
+        @include lg(){
+            column-gap: 3rem;
+            row-gap: 2rem;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}

@@ -1,0 +1,127 @@
+@import "../../index.scss";
+
+
+.navbar{
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        @include center-elements();
+        svg{
+            width: 10rem;
+        }
+    }
+    .nav{
+        position: fixed;
+        top: 8rem;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+        &.show{
+            display: block;
+        }
+        &.hide{
+            display: none;
+            @include md(){
+                display: block;
+            }
+        }
+
+        @include md(){
+            position: static;
+            width: unset;
+        }
+        .list{
+        
+            width: 90%;
+            margin: 0 auto;
+            background-color: $bg-dark-card;
+            display: flex;
+            flex-direction: column;
+            border-top: 2px solid $color-hover-primary;
+            @include md(){
+                width: unset;
+                margin: unset;
+                flex-direction: row;
+                background-color: transparent;
+                border-top: unset;
+            }
+            
+        }
+
+        &--link{
+            padding: 1rem;
+            &.active{
+                background-color: $color-primary;
+            }
+            &:hover{
+                background-color: $color-primary;
+                color: white;
+            }
+        }
+
+        @include md(){
+            &--link{
+                color: $color-secondary;
+                position: relative;
+                margin-left: 1rem;
+                @include md(){
+                    margin-left: 2rem;
+                }
+                @include lg(){
+                    margin-left: 3rem;
+                }
+                @include xlg(){
+                    margin-left: 4rem;
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 4rem;
+                    width: 50%;
+                    border-radius: 100px;
+                    background-color: $color-primary;
+                    height: 0;
+                    left: 25%;
+                    right: 25%;
+                    transition: height .3s ease-in-out;
+    
+                }
+                &:hover{
+                    color: $color-white;
+                    background-color: unset;
+                    &::after{
+                        height: 4px !important;
+                    }
+                }
+                
+                &.active{
+                    color: $color-white;
+                    background-color: unset;
+                    &::after{
+                        height: 4px !important;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-icon{
+        height: 5rem;
+        width:5rem;
+        border-radius: 100px;
+        background-color: $color-primary;
+        @include center-elements();
+        cursor: pointer;
+        &:hover{
+            background-color: $color-hover-primary;
+        }
+        @include md(){
+            display: none;
+        }
+        svg{
+            transform: scale(1.2);
+            pointer-events: none;
+        }
+    }
+}

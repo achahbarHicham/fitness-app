@@ -1,0 +1,13 @@
+@import "../index.scss";
+.header{
+    height: 100vh;
+    width: 100%;
+    background: $color-black;
+    
+    @include lg(){
+        background-image: url('../assets/hero-image.png'),linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(8,1,13,1) 39%, rgba(22,2,37,0) 100%);
+   }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

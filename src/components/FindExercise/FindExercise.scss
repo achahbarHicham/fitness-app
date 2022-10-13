@@ -1,0 +1,44 @@
+@import "../../index.scss";
+
+.find-exercise{
+    padding: 10rem 0;
+        .form-group{
+            width: 100%;
+            margin: 5rem auto;
+            max-width: 50rem;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+
+            @include lg(){
+                margin: 10rem auto;
+            }
+
+            label{
+                display: block;
+                font-weight: $fw-bold;
+                margin-bottom: 1rem;
+                @include md(){
+                    font-size: 1.8rem;
+                }
+            }
+            input{
+                font-size: inherit;
+                padding: .8rem ;
+                width: 100%;
+                outline: none;
+                border: 1px solid $color-primary;
+                font-family: inherit;
+                
+                @include lg(){
+                    padding: 1.2rem;
+                }
+            }
+             
+        .resutl{
+            margin-top: 1rem;
+        }
+        }
+   
+}

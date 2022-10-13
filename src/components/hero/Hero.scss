@@ -1,0 +1,69 @@
+@import "../../index.scss";
+
+.hero{
+    height: calc(90vh - 8rem);
+    padding-top: 20%;
+    // padding: 20% 5% 20% 5%;   
+    @include md(){
+        padding-top: 10%;
+    }
+    @include lg(){
+        padding-top: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    &--title{
+        margin-bottom: 4rem;
+        font-size: 4rem;
+        text-align: center;
+        line-height: 1.5;
+        text-transform: capitalize;
+        @include md(){
+            font-size: 5rem;
+            line-height: 1.2;
+            width: 90%;
+        }
+        @include lg(){
+            width: 60%;
+            text-align: left;
+            font-size: 6rem;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+        @include xlg(){
+            font-size: 7rem;
+            line-height: 1.2;
+            margin-bottom: 3rem;
+        }
+    }
+    &--subtitle{
+        color: $color-secondary;
+        text-align: center;
+        line-height: 1.5;
+        @include md(){
+            width: 90%;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        @include lg(){
+            text-align: left;
+            width: 50%;
+            margin: unset;
+            line-height: 1.8;
+        }
+    }
+    .btns-container{
+        margin-top: 8rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        @include lg(){
+            justify-content: flex-start;
+        }
+    }
+}

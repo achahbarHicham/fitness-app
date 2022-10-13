@@ -1,0 +1,7 @@
+@import "../../../index.scss";
+.hero-video-exersice{
+    @include lg(){
+        display: flex;
+        gap: 2rem;
+    }
+}

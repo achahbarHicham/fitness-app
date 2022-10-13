@@ -1,0 +1,72 @@
+@import "../../index.scss";
+.card-exersice{
+    width: 100%;
+    height: 90%;
+    
+    @include sm(){
+        height: 100%;
+    }
+    @include lg(){
+        display: flex;
+        align-items: center;
+        background-color: $bg-dark-card;
+    }
+   
+    &--titles{
+        text-align: center;
+     @include lg(){
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-bottom: 0;
+        padding: 0 0 0 10rem;
+     }
+        padding: 2rem;
+        margin-bottom: 2rem;
+        h3{
+            text-transform: capitalize;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+            @include lg(){
+                font-size: 3rem;
+            }
+            @include xlg(){
+                font-size: 4rem;
+            }
+        }
+        p {
+            span{
+                @include lg(){
+                    display: block;
+                    margin-bottom: 1rem;
+                    color: $color-secondary;
+                    strong{
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+    &--image{
+        @include lg(){
+            flex: 1;
+            height: 100%;
+            background-color: $color-white;
+        }
+        height: 75%;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            max-height: 50rem;
+            @include lg(){
+                height: 100%;
+                max-height: 100%;
+            }
+            object-fit: cover;
+        }
+    }
+}

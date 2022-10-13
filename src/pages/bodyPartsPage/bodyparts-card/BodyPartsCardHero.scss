@@ -1,0 +1,48 @@
+@import "../../../index.scss";
+
+
+.bodyparts-hero-card{
+    height: 30rem;
+    width: 40rem;
+    background-color: $bg-dark-card;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 1rem;
+    transition: all .3s ease;
+    &.active{
+        background-color: $color-primary;
+        color: white;
+        button{
+            background-color: white;
+            color: $bg-dark-card;
+            font-weight: $fw-bold;
+        }
+    }
+    button{
+        padding: 1.5rem 4rem;
+        font-size: inherit;
+        border-radius: 100px;
+        background-color: $btn-dark-card-color;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover{
+            background-color: #4b6283;
+            transition: background-color .5s ease;
+        }
+    }
+
+    &:hover{
+        background-color: $color-primary;
+        color: white;
+        button{
+            background-color: white;
+            color: $bg-dark-card;
+
+        }
+    }
+
+}
