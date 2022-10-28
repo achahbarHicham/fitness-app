@@ -12,6 +12,11 @@ const Navbar = () => {
   const [isHome,setIsHome] = useState(true)
   const [isOpenNav,setIsOpenNav] = useState(false)
 
+
+  document.addEventListener('scroll',() => setIsOpenNav(false))
+  
+
+
   useEffect(() => {
     Location.pathname === "/" ? setIsHome(true) : setIsHome(false)
   },[Location])

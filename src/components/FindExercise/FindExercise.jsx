@@ -33,9 +33,9 @@ const FindExercise = () => {
 
     setExersice(inputRef.current.value)
       const filterdExersice = DATA.filter(ex => 
-        ex.bodyPart.includes(inputRef.current.value) || 
-        ex.name.includes(inputRef.current.value) ||
-        ex.target.includes(inputRef.current.value)
+        ex.bodyPart.includes(inputRef.current.value.toLowerCase()) || 
+        ex.name.includes(inputRef.current.value.toLowerCase()) ||
+        ex.target.includes(inputRef.current.value.toLowerCase())
         )
     setAllExersicesData(filterdExersice)
 
