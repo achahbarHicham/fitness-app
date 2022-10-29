@@ -4,6 +4,7 @@ import { NavLink,Outlet,useLocation,Link } from "react-router-dom";
 import {ReactComponent as Logo} from '../../assets/logo-puplish.svg'
 import {ReactComponent as HumbergurMenu} from '../../assets/mobile-icon.svg'
 import Hero from "../hero/Hero";
+import AppHead from "../../AppHead";
 
 
 const Navbar = () => {
