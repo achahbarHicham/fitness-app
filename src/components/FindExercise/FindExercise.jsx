@@ -32,6 +32,7 @@ const FindExercise = () => {
   const findExersice = () => {
 
     setExersice(inputRef.current.value)
+
       const filterdExersice = DATA.filter(ex => 
         ex.bodyPart.includes(inputRef.current.value.toLowerCase()) || 
         ex.name.includes(inputRef.current.value.toLowerCase()) ||
