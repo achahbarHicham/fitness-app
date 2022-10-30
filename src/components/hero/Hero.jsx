@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <main className='hero container'>
         <h1 className='hero--title'>let’s Exersice & get fit together</h1>
-        <p className="hero--subtitle">We provide the best exersice and video exercises for each body part, you kind find every movement for each body part.</p>
+        <p className="hero--subtitle">We provide the best exersice and video exercises for each body part, you can find every movement for each body part.</p>
         <div className="btns-container">
             <Link to='/bodyParts'>
               <Button className='btn btn-primary' text='Body Parts' />
