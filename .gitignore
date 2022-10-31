@@ -7,7 +7,7 @@
 
 .env
 
-headerApi.js
+/src/headerApi.js
 
 # testing
 /coverage
